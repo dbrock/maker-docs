@@ -11,9 +11,9 @@
 
 <p> Maker is a decentralized autonomous organization that uses monetary policy enforced by smart contracts running on Ethereum to maintain a price peg in a stable cryptocurrency called the dai. The main goal of the Maker DAO is to ensure long-term price stability and deflation of the dai.
 
-<p> <b>Status:</b> As of March 2016, the core system has been deployed and the Dai Alpha is about to start. During this phase, a limited amount of dai will be manually issued by a trusted group of stakeholders. For more information, see section 7, “How Maker is controlled and governed.”
-
 <p> The discussion, governance and development of Maker takes place on <a href=https://makerdao.slack.com>Slack</a>, in the <a href=https://forum.makerdao.com>forum</a>, in the <a href=https://www.reddit.com/r/makerdao>subreddit</a>, on <a href=https://github.com/makerdao>GitHub</a> and in the weekly governance meeting held via TeamSpeak on Sundays. The equity token (MKR) is liquid on the decentralized exchange <a href=https://x.makerdao.com>MakerX</a>.
+
+<p class=status> <b>Status:</b> As of March 2016, the core system has been deployed and the Dai Alpha is about to start. During this phase, a limited amount of dai will be manually issued by a trusted group of stakeholders. For more information, see section 7, “How Maker is controlled and governed.”
 
 <p> To contact the founder of Maker directly, please e-mail <code>rune@makerdao.com</code>.
 
@@ -29,7 +29,7 @@
 
 <p> In addition to DAOs and many other completely new use cases, smart contracts also greatly expand the capabilities of cryptocurrencies beyond Bitcoin and other first-generation projects. Smart contracts enable complex behaviour such as autonomous monetary policy that counteracts volatility, as well as decentralized insurance.
 
-<h2> The Maker DAO and the dai stablecoin </h2>
+<h2> The Maker DAO and the dai “stablecoin” </h2>
 
 <p> Maker is a decentralized autonomous organization based on the Ethereum blockchain. Using monetary policy enforced by smart contracts, it maintains the infrastructure for a stable and long-term deflationary cryptocurrency called the <dfn>dai</dfn>.
 
@@ -41,7 +41,7 @@
 
 <p> Holders of the dai, on the other hand, are able to use it both as a low-risk savings asset, and as a highly liquid and stable cryptocurrency on the Ethereum blockchain. The dai has low risk relative to most blockchain assets because every dai is provably backed by a diversified pool of collateral on the Ethereum blockchain, as well as by excess funds and profits stored in the Maker Vault.
 
-<h3> The ownership structure of the DAO </h3>
+<h3> The ownership structure of Maker </h3>
 
 <p> Maker is owned by the people who bought its core token during the development of the system. Like the dai, this token (called MKR) is also a cryptocurrency; unlike the dai, the MKR is not stable but is instead highly speculative and volatile. Its function is to provide collateral insurance to the users of the dai, as well as to regulate the risk of the Dai Credit System. Maker doesn’t have a legal entity or any representation in the legal world, as the entirety of the organization’s business logic is fully automated and executed on the Ethereum blockchain.
 
@@ -75,7 +75,7 @@
 
 <p class=example> <b> Example 3. </b> Alice and Bob come together using an Ethereum OTC contract to issue 100 SDR worth of dai backed by bitcoins. Alice contributes 50 SDR worth of bitcoins while Bob contributes 100 SDR worth. The OTC contract takes the funds and creates a CDP, thus issuing 100 SDR worth of dai. The newly issued dai are automatically sent to Bob. Effectively, Bob is buying 100 SDR worth of dai for the equivalent amount of BTC. The contract then transfers ownership of the CDP to Alice, meaning she ends up with 100 SDR worth of issuance debt (denominated in dai) and 150 SDR worth of collateral (denominated in bitcoins). Since she started with only 50 SDR worth of bitcoins, she is now 3x leveraged long BTC/SDR.
 
-<h2> How Maker stabilizes the dai </h2>
+<h2> How Maker ensures the stability of the dai </h2>
 
 <p> The stability of the dai around the target price is maintained by continuously matching demand between issuers and holders using <dfn>deflation rate adjustment</dfn>. The forced cover mechanism directly enforces the target price on the open market using collateral from CDPs, and also ensures short-term liquidity and price support in the face of dai demand shocks.
 
@@ -136,40 +136,44 @@ then performing a forced cover of this CDP for 100 SDR worth of dai would only b
 
 <p> The market value of MKR is what ultimately insures the collateral of the credit system. As such, the price of MKR is directly exposed to the risk of the whole system. To compensate MKR owners for taking on this risk, during times of stability (when there is no outstanding emergency debt), the funds held in the Maker vault is slowly sold off for MKR. The MKR thus obtained is permanently destroyed in an automatic process called <dfn>buy and burn</dfn>. The rate at which buy and burn happens is determined by MKR holders through voting. The result (in the absence of undercollateralization events) is a successive decrease in the supply of MKR, causing its price to increase.
 
-<h2> How Maker determines collateral risk </h2>
+<h2> How Maker calculates collateral risk factors </h2>
 
 <p> Two primary factors determine the risk of a given collateral type: market depth, and volatility. While these two factors are related (higher market depth generally implies less volatility) they still contribute separately to the overall risk and are managed through separate mechanisms.
 
-<h3> Risk due to low market depth </h3>
+<h3> Collateral risk due to low market depth </h3>
 
 <p> The impact of market depth on the risk of a given collateral type is managed through its <dfn>debt ceiling</dfn>. The debt ceiling of an asset class is the maximum amount of issuance debt that can be held in CDPs which are collateralized by that kind of asset. Once the debt ceiling for any given asset class has been reached, then no more dai can be issued using that kind of asset as collateral until some of the existing CDPs are covered. (Of course, new dai can still be issued using other types of collateral.)
 
-<h3> Risk due to high volatility </h3>
+<h3> Collateral risk due to high volatility </h3>
 
 <p> The volatility of a given type of collateral is managed using the collateral curve defined by the zero point, set in such a way so as to ensure that the collateral buffers of those CDPs are sufficient to have a positive bounty (and thus get margin called) even in times of the highest volatility observed for that asset class under normal conditions. Hence, more volatile assets will have higher zero points (allowing for less leverage by issuers), while less volatile assets will have lower zero points (allowing for more leverage).
 
 
-<h2> External agents supporting Maker </h2>
+<h2> How external rational agents assist Maker </h2>
 
-<p> The mechanics of the Dai Credit System relies on rational actors to interact and trade with the system in ways that is profitable to themselves, such as margin calling CDPs with low collateral. 
+<p> The mechanics of the Dai Credit System relies on rational actors to interact and trade with the system in ways that are profitable to themselves.
 
-<h3> Keepers (reward-seeking agents) </h3>
+<h3> Keepers (generalized reward seekers) </h3>
 
 <p> Traders that systematically earn an income from the credit system by exploiting relatively simple profit opportunities are termed <dfn>keepers</dfn>. In a general sense, a keeper is an economic agent that contributes to a decentralized system in exchange for built-in rewards. In the context of Maker, keepers perform several important functions:
 
 <ul>
 
-<li> <b>Margin calling undercollateralized CDPs.</b> Each keeper is constantly scanning the blockchain for CDPs. As soon as it finds a CDP with a positive effective bounty, it will immediately perform a forced cover using its dai reserves to earn the bounty. It will then proceed to sell the obtained collateral asset on a market in order to keep its dai balance growing and not suffer undue exposure to other assets.
+<li> <b>Margin calling undercollateralized CDPs</b>
 
-<li> <b>Market making the dai around the target price.</b> Each keeper will want to try to sell dai when the market price is higher than the target and buy dai when the price is lower than the target, in order to profit on the spread.
+<p> Each keeper is constantly scanning the blockchain for CDPs. As soon as it finds a CDP with a positive effective bounty, it will immediately perform a forced cover using its dai reserves to earn the bounty. It will then proceed to sell the obtained collateral asset on a market in order to keep its dai balance growing and not suffer undue exposure to other assets.
 
-<li> <b>Acting as an oracle by providing a price feed.</b> More information given below.
+<li> <b>Market making the dai around the target price</b>
+
+<p> Each keeper will want to try to sell dai when the market price is higher than the target and buy dai when the price is lower than the target, in order to profit on the spread.
 
 </ul>
 
 <p> To make it easy for anyone to act as a keeper, Maker is funding the development of an open source software stack (called Keeper). This enables anyone to run a server that acts a trading bot and oracle tool to perform the above-mentioned functions. The Keeper software is designed to be run on a small device, such as a Raspberry Pi or the so-called Ethereum Computer.
 
-<h3> Oracles (price feed providers) </h3>
+<p> A keeper can also act as an oracle by providing a price feed, as described in the following section.
+
+<h3> Oracles (external price feed providers) </h3>
 
 <p> Another crucial group of external actors that the credit system requires to function are the price feed oracles. Oracles are mechanisms that provide information from the outside world onto a blockchain for smart contracts to consume. Maker needs information about the market price of the dai in order to determine its deviation from the target price. It also needs information about the market price of the various assets used as collateral for the dai, in order to determine the bounty for forced covers on CDPs, as well as when a Maker bailout should be triggered.
 
@@ -186,7 +190,7 @@ then performing a forced cover of this CDP for 100 SDR worth of dai would only b
 </ul>
 
 
-<h2> How Maker is controlled and governed </h2>
+<h2> Governance and development of Maker </h2>
 
 <p> Authority in DAOs work differently than in traditional organizations. It’s entirely explicit and direct, in the sense that if an entity has the authority to spend funds from the DAO or change a variable in its business logic, it can do so by sending a transaction to a smart contract on the blockchain and the action will immediately, unconditionally, and irreversibly happen—unless of course the DAO has rules in place to delay it. A DAO can be fully modifiable, meaning that its authority can change any part of its smart contracts and business logic, or it can be restricted, meaning that parts of its infrastructure are permanently locked down and unmodifiable even by the DAOs owners. Restricted authority is useful to help users trust that the DAO will not suddenly alter its service in a detrimental way, steal their funds, etc.
 
@@ -206,64 +210,88 @@ then performing a forced cover of this CDP for 100 SDR worth of dai would only b
 
 <h3> Long-term development roadmap </h3>
 
-<p> There are several phases after the Dai Alpha that will be implemented in discrete steps, in the following order.
+<p> There are several phases on the roadmap after the Dai Alpha. The development will happen in discrete steps, in the following order.
 
-<ol>
+<ul>
 
-<li> <b>Decentralized CDP engine.</b> Once the CDP engine is deployed, users will be able to issue dai directly by interacting with a set of smart contracts on the Ethereum blockchain. At this point, Maker Insurance will not yet have been implemented, so the stability of the dai will not be as strong as in the full implementation. Furthermore, there will not yet be any MKR voting, so users and shareholders will still need to trust the Alpha Dynasty to be Maker’s executive authority.
+<li> <b>Decentralized CDP contracts</b>
 
-<li> <b>MKR voting.</b> This feature will allow shareholders to fully control the Maker DAO by proposing actions and voting on their execution through a user interface. Once this is implemented, the Alpha Dynasty will no longer be necessary and from this point on Maker will have a decentralized governance structure.
+<p> This feature will allow users to issue dai directly by interacting with a set of smart contracts on the Ethereum blockchain.
 
-<li> <b>Maker Insurance.</b> This feature means that Maker will be able to automatically dilute MKR in order to bail out bad CDPs. Once this is implemented, the dai will have full stability and strong decentralization.
+<p> When the CDP engine is deployed, Maker Insurance will not yet have been implemented, so the stability of the dai will not be as strong as in the full implementation. Furthermore, there will not be any MKR voting, so users and shareholders still need to trust the Alpha Dynasty.
+
+<li> <b>Decentralized MKR voting</b>
+
+<p> This feature will allow shareholders to fully control the Maker DAO by proposing actions and voting on their execution through a user interface.
+
+<p> Once this is implemented, the Alpha Dynasty will no longer be necessary and from this point on Maker will have a decentralized governance structure.
+
+<li> <b>Maker Insurance (automatic bailout dilution)</b>
+
+<p> This feature means that Maker will be able to automatically dilute MKR in order to bail out bad CDPs.
+
+<p> Once this is implemented, the dai will have full stability and strong decentralization.
+
+<li> <b>Authority lockdown</b>
+
+<p> Once all the features of the Dai Credit System have been fully implemented, all that’s left to do is to lock down the permissions of the Maker authority now controlled by MKR shareholders.
+
+<p> This will prevent shareholders from doing things like confiscating collateral from the CDPs of dai issuers. It will also limit how quickly the risk parameters and overall monetary policy of the credit system can be changed.
+
+<p> The end result is maximized decentralization and resilience of the dai stablecoin.
+
+</ul>
 
 
-<li> <b>Authority lockdown.</b> Once all the features of the Dai Credit System have been fully implemented, all that’s left to do is to lock down the permissions of the Maker authority (now controlled by MKR shareholders). This will make it impossible for shareholders to do things like confiscate collateral from the CDPs of dai issuers. This will also limit how quickly the risk parameters and overall monetary policy of the credit system can be changed. The end result is maximized decentralization and resilience of the dai stablecoin.
+<h2> How legal custodians expand Maker’s reach </h2>
 
-<li> <b>Long-term governance.</b> Initially, the risk parameters and monetary policy of the credit system will be controlled by the Alpha Dynasty. In the long run, this responsibility will be handed over to a set of decentralized prediction markets according to the concept of <dfn>futarchy</dfn>. This way, Maker will ultimately be fully governed by the free market—even down to the level of day-to-day operations.
+<p> Legal entities registered in national jurisdictions around the world that perform vital functions to ensure the stability and economic efficiency of the Dai Credit System are called <dfn>custodians</dfn>.
 
-</ol>
+<h3> Creating links to incumbent institutions </h3>
 
+<p> Custodians create a contact surface through which Maker can interact with incumbent institutions around the world which are able to impact its growth and stability (e.g., governments).
 
-<h2> Custodians: connecting the dai to the global economy </h2>
+<p> Since custodians are owned and run by individual people, they can use their personal connections, their trust, and their reputation to secure inroads to partnerships that normally would be out of reach to a DAO. For example, financing a joint venture with a government, or coordinating with a government to funnel money into strategic sectors [clarify?] in return for public support of Maker.
 
-<p> Custodians are legal entities (incorporated companies), registered in national jurisdictions around the world, that perform vital functions to ensure the stability and economic efficiency of the Dai Credit System.
+<p> Seeking and maintaining such relationships and shared interests with governments and public institutions will be crucial in order to ensure that the rise of Maker and the proliferation of the dai is seen as a positive development by the incumbents and that they will not budge to protectionist urges by vested interests that stand to be disrupted.
 
-<p> At its core, a custodian is an entity that has special issuance privileges given to it by Maker’s governance process. These issuance privileges mean that a custodian can back its dai issuance with collateral which is held internally (i.e., on the company’s books and accounts), rather than as locked collateral on the Ethereum blockchain.
+<h3> Diversifying the collateral asset pool </h3>
 
-<p> This can be done in an cryptoeconomically secure manner by ensuring that the governance process enforces five main requirements:
+<p> At its core, a custodian is an entity that has special issuance privileges given to it by Maker’s governance process. These issuance privileges mean that a custodian can back its dai issuance with collateral which is held internally (i.e., on the company’s books and accounts), rather than as locked collateral on the Ethereum blockchain. This can be done in a secure manner by ensuring that the governance process enforces the five main custodian requirements described below.
 
-<h3> Reserve buffers </h3>
+<p> Ideally, custodians should be incentivized not just to fulfill but in fact to actively improve the security provided by these requirements. The key to achieving this will be to foster a competitive environment in which, when debt ceilings are raised by the Maker governance process, those custodians are favored who have demonstrated an ability to actively pursue the spirit of these custodian requirements.
 
-<p> If a custodian receives a debt ceiling from Maker and uses it to issue dai in order to trade it for other assets, then the custodian needs to be able to withstand the volatility of these other assets. Therefore, a custodian must always maintain a minimum <dfn>reserve buffer</dfn> of capital, which ensures that it stays solvent even when there are price swings in its assets. The reserve buffer of a custodian is comparable to the zero point of a CDP.
+<ul>
+<li> <b> Total public transparency </b>
 
-<p class=example> <b> Example 1. </b> A group of investors form a new custodian in Singapore and initially inject $50,000 USD worth of capital into its Singapore bank account. The Maker governance process has decided that the custodian reserve buffer requirement is 20% of issuance debt, giving the custodian a maximum debt ceiling of $250,000 USD. If the custodian issued all the dai at once and sold them off for other assets, it would end up with a capital pool worth a total of $300,000 USD, along with $250,000 USD worth of debt.
+<p> In order for the Maker governance process to be able to properly determine whether a custodian is solvent and adhering to the reserve requirements, it will be necessary for custodians to have the entirety of their accounting completely public and transparent in such a way that real time audits are available to be performed by anyone at any time.
 
-<h3> Custodian traps </h3>
+<p> In addition to the general requirement of total transparency and total information availability, in order to maximize the accessibility of this information to the MKR stakeholders, each custodian must also actively present, at a time near each governance meeting, a summary of its positions as well as any changes since the last presentation.
 
-<p> The custodian trap is a special smart contract that gives Maker “lethal leverage” against a custodian, should the custodian be unable to pay down its issuance debt within a short timeframe. A custodian trap usually holds two types of assets: either the vast majority of legal stock in the custodian company, or else MKR tokens individually provided by investors or partners of the custodian.
+<li> <b> Capital reserve buffers </b>
 
-<p> The existence of the custodian trap ensures that the custodian is forced to always remain liquid and able to cover all of its debt at once with short notice. It also means that a custodian cannot profitably walk away from its debt. This keeps the counterparty risk at a reasonable level as there is no incentive for the custodian to attack Maker.
+<p> When a custodian receives a debt ceiling from Maker and uses it to issue dai in order to trade it for other assets, it needs to be able to withstand the volatility of these other assets and must therefore always maintain a minimum <dfn>reserve buffer</dfn> of capital. This ensures that it stays solvent under normal price swings in its assets. (The reserve buffer of a custodian is similar to the zero point of a CDP.)
 
-<p class=example> <b> Example 2. </b> A custodian in Singapore uses a legal security gateway service to allow it to track its shares on the Ethereum blockchain. The custodian then creates a custodian trap smart contract and puts 90% of its stock in it. According to negotiations with the Maker governance process, the custodian’s trap is set to have a delay of one month. If the custodian later does not fulfill its obligations to Maker regarding the size of its reserve buffer relative to its debt, then Maker is able to spring the trap, forcing the custodian to pay down all of its debt within one month. If after a month the debt still has not been paid off, then the shares in the custodian are auctioned off to the highest bidder. (Note that the custodian shares also represent a claim to 90% of the custodian’s assets.) The proceeds of this sale is then used to pay down the custodian’s debt.
+<p class=example> <b> Example 1. </b> A group of investors form a new custodian in Singapore and initially inject $50,000&nbsp;USD worth of capital into its Singapore bank account. The Maker governance process has decided that the custodian reserve buffer requirement is 20% of issuance debt, giving it a maximum debt ceiling of $250,000&nbsp;USD. If the custodian issued all the dai at once and sold them off for other assets, it would end up with a capital pool worth a total of $300,000&nbsp;USD and a debt of $250,000&nbsp;USD.
 
-<h3> Portfolio diversification </h3>
+<li> <b> Well-diversified portfolios </b>
 
 <p> Every custodian must hold a portfolio of stable and sustainable assets, with an aggregate volatility that is low enough to ensure that the reserve buffer will always be enough to cover price swings. Custodians will generally want to target a portfolio composition that gives them a higher yield than what they have to pay in issuance costs.
 
-<h3> Total public transparency </h3>
+<li> <b> Custodian traps </b>
 
-<p> In order for the Maker governance process to be able to properly determine whether a custodian is solvent and adhering to the reserve requirements, it will be necessary for custodians to have the entirety of their accounting completely public and transparent in such a way that real time audits are available to be performed by anyone at any time. In addition to this general requirement of total transparency and total information availability, in order to maximize the accessibility of the information to MKR stakeholders, each custodian must also actively present, at a time near each governance meeting, a summary of its positions as well as any changes since the last presentation.
+<p> The custodian trap is a special smart contract that gives Maker “lethal leverage” against a custodian, should the custodian be unable to pay down its issuance debt within a short timeframe. A custodian trap usually holds two types of assets: legal stock in the custodian company (usually the vast majority of it) and/or MKR tokens individually provided by investors or partners of the custodian.
 
-<h3> Graceful exit strategies </h3>
+<p> The existence of the custodian trap ensures that the custodian is forced to always remain liquid and able to cover all of its debt at once with short notice. It also means that a custodian cannot profitably walk away from its debt. This keeps the counterparty risk at a reasonable level as there is no incentive for the custodian to attack Maker.
 
-<p> At all times, a custodian needs to have a clear, publicly available plan that details exactly how it could wind down its positions and pay off its debt in a manner that doesn’t result in significant loss of funds or delays due to liquidity issues, regulatory problems or other factors. As part of this process, the custodian must prove its ability to pay down its issuance debt well within the delay period of its custodian trap. The ability to exit gracefully is important in the case where a conflict occurs between a custodian and its host jurisdiction. (For example, a country may decide to try to ban the Dai Credit System, making it difficult or impossible for a custodian to operate legally.)
+<p class=example> <b> Example 2. </b> A custodian in Singapore uses a legal security gateway service to track his company shares on the Ethereum blockchain. He creates a custodian trap smart contract and puts 90% of his stock in it. According to negotiations with the Maker governance process, his trap is set to have a delay of one month. If at any time he does not fulfill his obligations to Maker regarding the size of his reserve buffer (relative to his debt), then Maker is able to spring the trap, forcing him to pay down all of his debt within one month. If after one month the debt still has not been paid off, then the shares in his company (which represent a claim to 90% of his assets) are auctioned off to the highest bidder. The proceeds of this sale is then used to pay down his debt.
 
-<h3> Competitive debt ceilings </h3>
+<li> <b> Graceful exit strategies </b>
 
-<p> Ideally, custodians should be incentivized not just to fulfill but in fact to actively improve the security provided by the requirements listed above. The key to achieving this will be to foster a competitive environment in which, when debt ceilings are raised by the Maker governance process, those custodians are favored who have demonstrated an ability to actively pursue the spirit of the custodian requirements.
+<p> At all times, a custodian needs to have a clear, publicly available plan that details exactly how it could wind down its positions and pay off its debt in a manner that doesn’t result in significant loss of funds or delays due to liquidity issues, regulatory problems or other factors. As part of this process, the custodian must prove its ability to pay down its issuance debt well within the delay period of its custodian trap.
 
-<h3> Contact with incumbents </h3>
+<p> The ability to exit gracefully is important in the case where a conflict occurs between a custodian and its host jurisdiction. (For example, a country may decide to try to ban the Dai Credit System, making it difficult or impossible for a custodian to operate legally.)
 
-<p> Custodians create a contact surface with which Maker can interact with the incumbent institutions around the world which are able to impact Maker’s growth and stability—most importantly, governments. As custodians are owned and run individual people, they can use their personal connections, trust and reputation to secure Maker an inroad to partnerships that normally would be out of reach to a DAO. For example, financing a joint venture with a government, or coordinating with governments to funnel money into strategic sectors in return for public support of Maker. Seeking and maintaining relationships and shared interests with governments and public institutions will be crucial in order to ensure that the rise of Maker and the proliferation of the dai is seen as a positive development by the incumbents, and that they will not budge to protectionist urges by vested interests that stand to be disrupted.
+</ul>
 
 <script src=index.js></script>

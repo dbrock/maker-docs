@@ -10,7 +10,11 @@ ol { list-style-type: none }
 ul { list-style-type: square }
 ul { margin-left: 1rem }
 b { font-family: sans-serif; font-size: 90% }
-.example { margin-left: 1rem }
+.example { margin-left: 1rem; margin-right: 1rem }
+.example { font-size: .6rem; font-family: sans-serif;  }
+.status { font-family: sans-serif; font-size: .7rem; }
+.status { padding: .5rem 1rem; border: 1px solid #ccc; }
+
 hgroup img { width: 4.2rem }
 hgroup img { float: right }
 hgroup h1 { line-height: 3rem; font-size: 2.5rem }
@@ -22,4 +26,5 @@ ol ol { padding-left: 1rem }
 h2, h3 { font-size: inherit }
 h2, h3 { padding-top: 1rem; margin-top: 0 }
 h3 { margin-top: -1rem }
-h3 { font-weight: normal }
+h2 { font-weight: normal }
+h2 { font-size: 1.2rem }
