@@ -11,7 +11,7 @@
 
 <p> Maker is a decentralized autonomous organization that uses monetary policy enforced by smart contracts running on Ethereum to maintain a price peg in a stable cryptocurrency called the dai. The main goal of the Maker DAO is to ensure long-term price stability and deflation of the dai.
 
-<p> <b>Status:</b> As of March 2016, the core system has been deployed and the Dai Alpha is about to start. During this phase, a limited amount of dai will be manually issued by a trusted group of stakeholders. For more information, see section 7, "How Maker is controlled and governed."
+<p> <b>Status:</b> As of March 2016, the core system has been deployed and the Dai Alpha is about to start. During this phase, a limited amount of dai will be manually issued by a trusted group of stakeholders. For more information, see section 7, “How Maker is controlled and governed.”
 
 <p> The discussion, governance and development of Maker takes place on <a href=https://makerdao.slack.com>Slack</a>, in the <a href=https://forum.makerdao.com>forum</a>, in the <a href=https://www.reddit.com/r/makerdao>subreddit</a>, on <a href=https://github.com/makerdao>GitHub</a> and in the weekly governance meeting held via TeamSpeak on Sundays. The equity token (MKR) is liquid on the decentralized exchange <a href=https://x.makerdao.com>MakerX</a>.
 
@@ -45,7 +45,7 @@
 
 <p> Maker is owned by the people who bought its core token (called MKR) during the development of the system. The MKR token is also a cryptocurrency like the dai, but it does not have price stability; on the contrary, it is highly speculative and volatile. Its function is to provide collateral insurance to the users of the dai, as well as to regulate the risk of the credit system. Because the entirety of Maker’s business logic is fully automated and executed on the Ethereum blockchain, there is no legal entity and the organization doesn’t have any representation in the legal world.
 
-<p> The MKR holders gain value from the Dai Credit System as a whole because the MKR token represents ownership of Maker’s insurance service. All dai issuers pay an insurance fee which is funneled to MKR holders. In return, Maker is forced to bail out any bad debt in the event of a sudden collateral crash (sometimes called a "black swan event"). If Maker does not have enough assets on hand to immediately cover all bad debt, the MKR supply is automatically inflated and sold off to raise funds in order to cover all the bad debt over time. As a result, MKR owners are exposed to both the profits and the risk of Maker’s insurance service.
+<p> The MKR holders gain value from the Dai Credit System as a whole because the MKR token represents ownership of Maker’s insurance service. All dai issuers pay an insurance fee which is funneled to MKR holders. In return, Maker is forced to bail out any bad debt in the event of a sudden collateral crash (sometimes called a “black swan event”). If Maker does not have enough assets on hand to immediately cover all bad debt, the MKR supply is automatically inflated and sold off to raise funds in order to cover all the bad debt over time. As a result, MKR owners are exposed to both the profits and the risk of Maker’s insurance service.
 
 <p> When Maker is deployed, the total MKR supply will start at 1,000,000 MKR. Prior to this, around 450,000 MKR (45%) has already been distributed to the founders and early investors of the system, in a combination of founders’ stake, private sales, as well as public sales.
 
@@ -65,7 +65,7 @@
 
 <p> The deflationary nature of the dai means that the market value (in SDR) of the issuance debt will also increase over time. Therefore, when calculating the total effective cost, a dai issuer needs to take this into consideration in addition to the insurance fee. The deflation is a transfer of value from dai issuers to dai holders (as payment for borrowing capital), while the insurance fee is a transfer of value from dai issuers to MKR holders (as payment for insuring the collateral).
 
-<p> Issuing dai can be thought of as borrowing capital from the credit system. In practice, the issuer is either seeking to take a leveraged long position on the asset used as collateral ("margin trading"), or else is seeking liquidity in a hard currency without selling the asset used as collateral  (for example, a business collateralizing its own stock in order to raise short-term liquidity for operational expenses).
+<p> Issuing dai can be thought of as borrowing capital from the credit system. In practice, the issuer is either seeking to take a leveraged long position on the asset used as collateral (“margin trading”), or else is seeking liquidity in a hard currency without selling the asset used as collateral  (for example, a business collateralizing its own stock in order to raise short-term liquidity for operational expenses).
 
 <p> In both cases, the way the issuer obtains the asset he actually desires is by creating a CDP to obtain dai and then selling the dai on the open market. On the other side of this trade, buyers will want to obtain dai in order to use it as a stable cryptocurrency on the Ethereum blockchain or simply to earn capital gains due to its long-term deflationary nature.
 
@@ -240,7 +240,7 @@ then performing a forced cover of this CDP for 100 SDR worth of dai would only b
 
 <h3> Custodian traps </h3>
 
-<p> The custodian trap is a special smart contract that gives Maker "lethal leverage" against a custodian, should the custodian be unable to pay down its issuance debt within a short timeframe. A custodian trap usually holds two types of assets: either the vast majority of legal stock in the custodian company, or else MKR tokens individually provided by investors or partners of the custodian.
+<p> The custodian trap is a special smart contract that gives Maker “lethal leverage” against a custodian, should the custodian be unable to pay down its issuance debt within a short timeframe. A custodian trap usually holds two types of assets: either the vast majority of legal stock in the custodian company, or else MKR tokens individually provided by investors or partners of the custodian.
 
 <p> The existence of the custodian trap ensures that the custodian is forced to always remain liquid and able to cover all of its debt at once with short notice. It also means that a custodian cannot profitably walk away from its debt. This keeps the counterparty risk at a reasonable level as there is no incentive for the custodian to attack Maker.
 
