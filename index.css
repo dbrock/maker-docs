@@ -2,9 +2,9 @@
 
 * { margin: 0; padding: 0 }
 @media (min-width: 1024px) { html { font-size: 24pt } }
-@media (min-width: 1024px) { hgroup { margin: 2rem 0 1rem } }
+@media (min-width: 1024px) { hgroup { margin: 3rem 0 1rem } }
 body { font-family: "Crimson Text", serif }
-body { max-width: 32rem; margin: 2rem auto; padding: 1rem }
+body { max-width: 32rem; margin: 1rem auto; padding: 1rem }
 body { line-height: 1rem; font-size: .8rem }
 body { padding-bottom: 4rem }
 code { font-family: "Roboto Mono", monospace; font-size: .7rem }
@@ -20,7 +20,7 @@ b { font-family: Roboto, sans-serif; font-size: 90% }
 .example { margin-left: 1rem; margin-right: 1rem }
 .example { font-size: .6rem; font-family: Roboto, sans-serif;  }
 .status { font-family: Roboto, sans-serif; font-size: .7rem; }
-.status { padding: .5rem 1rem; border: 1px solid #ccc; }
+.status { padding: .5rem .75rem; border: 1px solid #ccc; }
 
 hgroup img { width: 4.2rem }
 hgroup img { float: right }
