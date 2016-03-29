@@ -24,8 +24,8 @@ hgroup div { letter-spacing: -.05rem; font-family: sans-serif }
 #toc a { text-decoration: none }
 ol ol { padding-left: 1rem }
 h2, h3 { font-size: inherit }
-h2 { line-height: 1.5rem }
-h2, h3 { padding-top: 1rem; margin-top: 0 }
+h2 { line-height: 1.4rem; padding-top: .6rem }
+h3 { padding-top: 1rem; margin-top: 0 }
 h3 { margin-top: -1rem }
 h2 { font-weight: normal }
 h2 { font-size: 1.2rem }
