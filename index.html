@@ -30,7 +30,8 @@ a limited amount of dai will be manually issued by a trusted group of
 stakeholders. For more information, see section 7, “How Maker is
 controlled and governed.”
 
-<p> To contact the founder of Maker directly, please e-mail <code>rune@makerdao.com</code>.
+<p> To contact the founder of Maker directly, please e-mail
+<code>rune@makerdao.com</code>.
 
 <div id=toc></div>
 
@@ -66,7 +67,7 @@ beyond Bitcoin and other first-generation projects. Smart contracts
 enable complex behaviour such as autonomous monetary policy that
 counteracts volatility, as well as decentralized insurance.
 
-<h2> The Maker DAO and the dai “stablecoin” </h2>
+<h2> The Maker DAO and the dai&nbsp;stablecoin </h2>
 
 <p> Maker is a decentralized autonomous organization based on the
 Ethereum blockchain. Using monetary policy enforced by smart
@@ -100,7 +101,7 @@ relative to most blockchain assets because every dai is provably
 backed by a diversified pool of collateral on the Ethereum blockchain,
 as well as by excess funds and profits stored in the Maker Vault.
 
-<h3> The ownership structure of Maker </h3>
+<h3> The ownership structure of&nbsp;Maker </h3>
 
 <p> Maker is owned by the people who bought its core token during the
 development of the system. Like the dai, this token (called MKR) is
@@ -235,7 +236,7 @@ SDR worth of issuance debt (denominated in dai) and 150 SDR worth of
 collateral (denominated in bitcoins). Since she started with only 50
 SDR worth of bitcoins, she is now 3x leveraged long BTC/SDR.
 
-<h2> How Maker ensures the stability of the dai </h2>
+<h2> How Maker ensures the stability of&nbsp;the&nbsp;dai </h2>
 
 <p> The stability of the dai around the target price is maintained by
 continuously matching demand between issuers and holders using
@@ -305,7 +306,10 @@ each type of collateral: riskier or more volatile asset classes have
 higher zero points, while safer or less volatile assets have lower
 zero points.
 
-<p> For simplicity reasons, the collateral curve will initially be a linear function with a slope of about 1. In this case, a 1% movement in collateralization ratio (in either direction) would produce a corresponding 1% change in the forced cover bounty.
+<p> For simplicity reasons, the collateral curve will initially be a
+linear function with a slope of about 1. In this case, a 1% movement
+in collateralization ratio (in either direction) would produce a
+corresponding 1% change in the forced cover bounty.
 
 <p class=example> <b> Example 4. </b> If we assume that bitcoin has a
 zero point of 130%, then a bitcoin-backed CDP collateralized at 135%
@@ -361,7 +365,7 @@ collateral requirement for issuing dai goes down, thus increasing the
 supply of dai and pushing the price down in the direction of
 the target.
 
-<h2> How Maker recovers when things go wrong </h2>
+<h2> How Maker recovers when things&nbsp;go&nbsp;wrong </h2>
 
 <p> The biggest risk to the stable value of the dai is the risk of CDP
 undercollateralization. Should a CDP see a massive price decrease in
@@ -401,7 +405,7 @@ all insurance fees paid out from CDPs when covered, so it normally has
 an existing pool of dai readily available to quickly perform
 a bailout.
 
-<h3> Automatic dilution to pay for all bailouts </h3>
+<h3> Automatic dilution to pay for&nbsp;bailouts </h3>
 
 <p> Should too many CDPs become undercollateralized simultaneously to
 the point where there isn’t enough dai in the Maker vault to bail them
@@ -434,7 +438,7 @@ result (in the absence of undercollateralization events) is a
 successive decrease in the supply of MKR, causing its price
 to increase.
 
-<h2> How Maker calculates collateral risk factors </h2>
+<h2> How Maker calculates collateral&nbsp;risk </h2>
 
 <p> Two primary factors determine the risk of a given collateral type:
 market depth, and volatility. While these two factors are related
@@ -465,7 +469,7 @@ conditions. Hence, more volatile assets will have higher zero points
 will have lower zero points (allowing for more leverage).
 
 
-<h2> How external rational agents assist Maker </h2>
+<h2> How external agents assist Maker </h2>
 
 <p> The mechanics of the Dai Credit System relies on rational actors
 to interact and trade with the system in ways that are profitable
@@ -506,7 +510,8 @@ to perform the above-mentioned functions. The Keeper software is
 designed to be run on a small device, such as a Raspberry Pi or the
 so-called Ethereum Computer.
 
-<p> A keeper can also act as an oracle by providing a price feed, as described in the following section.
+<p> A keeper can also act as an oracle by providing a price feed, as
+described in the following section.
 
 <h3> Oracles (external price feed providers) </h3>
 
@@ -533,17 +538,21 @@ price feed oracles are providing incorrect information.
 
 <ul>
 
-<li> <b> Keeper. </b> As Maker’s in-house oracle solution, this type
-of oracle is chosen by MKR owners through Maker’s regular governance
-mechanisms. Keeper oracles will be cheap to run, and a large amount of
-them can provide data together as a swarm, providing a high level of
-redundancy and decentralization.
+<li> <b> Keeper </b>
 
-<li> <b> Oraclize. </b> An external service that runs on Ethereum and
-delivers price information along with SSL-based cryptographic proofs
-that the information has not been tampered with. Oraclize provides a
-secondary source of information for the market price of assets, signed
-by the webservers of the centralized exchanges themselves.
+<p> As Maker’s in-house oracle solution, this type of oracle is chosen
+by MKR owners through Maker’s regular governance mechanisms. Keeper
+oracles will be cheap to run, and a large amount of them can provide
+data together as a swarm, providing a high level of redundancy
+and decentralization.
+
+<li> <b> Oraclize </b>
+
+<p> An external service that runs on Ethereum and delivers price
+information along with SSL-based cryptographic proofs that the
+information has not been tampered with. Oraclize provides a secondary
+source of information for the market price of assets, signed by the
+webservers of the centralized exchanges themselves.
 
 </ul>
 
