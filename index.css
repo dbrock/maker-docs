@@ -3,6 +3,7 @@
 @media (min-width: 1024px) { hgroup { margin: 2rem 0 } }
 body { max-width: 32rem; margin: auto; padding: 1rem }
 body { line-height: 1rem; font-size: .8rem }
+body { padding-bottom: 4rem }
 p, li { margin: 1rem 0 }
 code { font-size: 80%; }
 h1, h2, h3, h4, h5, h6 { font-family: sans-serif }
@@ -20,8 +21,8 @@ hgroup div { font-size: 1.25rem; line-height: 1.25rem }
 hgroup div { letter-spacing: -.05rem; font-family: sans-serif }
 #toc li { margin: .25rem; font-family: sans-serif }
 #toc a { text-decoration: none }
-#toc ol { padding-left: 1rem; text-indent: -1rem }
-
+ol ol { padding-left: 1rem }
 h2, h3 { font-size: inherit }
-h2 { margin-top: 2rem }
+h2, h3 { padding-top: 1rem; margin-top: 0 }
+h3 { margin-top: -1rem }
 h3 { font-weight: normal }
