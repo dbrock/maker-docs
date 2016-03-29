@@ -10,11 +10,11 @@
 
 <p> Maker is a decentralized autonomous organization that uses monetary policy enforced by smart contracts running on Ethereum to maintain a price peg in a stable cryptocurrency called the dai. The main goal of the Maker DAO is to ensure long-term price stability and deflation of the dai.
 
-<p> <strong>Status:</strong> As of March 2016, the core system has been deployed and is about to go into alpha. During the alpha phase, a limited amount of dai will be manually issued by the Alpha Dynasty. (For more information, see section 7, "How Maker is controlled and governed.")
+<p> <b>Status:</b> As of March 2016, the core system has been deployed and is about to go into alpha. During the alpha phase, a limited amount of dai will be manually issued by the Alpha Dynasty. (For more information, see section 7, "How Maker is controlled and governed.")
 
-<p> All discussion, governance and development take place on <a href=https://makerdao.slack.com>Slack</a>, in the <a href=https://forum.makerdao.com>forum</a>, on <a href=https://github.com/makerdao>GitHub</a>, and most importantly in the weekly governance meeting held via TeamSpeak on Sundays. The equity token MKR is liquid on the decentralized exchange <a href=https://x.makerdao.com>MakerX</a> (based on BitShares).
+<p> The discussion, governance and development of Maker takes place on <a href=https://makerdao.slack.com>Slack</a>, in the <a href=https://forum.makerdao.com>forum</a> and the <a href=https://www.reddit.com/r/makerdao>subreddit</a>, on <a href=https://github.com/makerdao>GitHub</a> and in the weekly governance meeting held via TeamSpeak on Sundays. The equity token MKR is liquid on the decentralized exchange <a href=https://x.makerdao.com>MakerX</a>.
 
-<p> To contact the founder of Maker directly, please e-mail <code>&lt;rune@makerdao.com&gt;</code>.
+<p> To contact the founder of Maker directly, you can e-mail <code>&lt;rune@makerdao.com&gt;</code>.
 
 <div id=toc></div>
 
@@ -68,11 +68,11 @@
 
 <p> In both cases, the way the issuer obtains the asset he actually desires is by creating a CDP to obtain dai and then selling the dai on the open market. On the other side of this trade, buyers will want to obtain dai in order to use it as a stable cryptocurrency on the Ethereum blockchain or simply to earn capital gains due to its long-term deflationary nature.
 
-<p class=example> <b> Example 2. </b> Bob wishes to go margin long on the BTC/SDR pair, so he issues 100 SDR worth of dai by posting 150 SDR worth of BTC to a CDP. He then turns around and buys another 100 SDR worth of BTC with her newly issued dai, putting her at a net 1.66&times; BTC/SDR exposure. He's free to do whatever he wants with the 100 SDR worth of BTC he obtained by selling her dai, while the original BTC held as collateral (150 SDR worth) remains locked until the issuance debt plus the insurance fee is covered.
+<p class=example> <b> Example 2. </b> Bob wishes to go margin long on the BTC/SDR pair, so he issues 100 SDR worth of dai by posting 150 SDR worth of BTC to a CDP. He then turns around and buys another 100 SDR worth of BTC with her newly issued dai, putting her at a net 1.66x BTC/SDR exposure. He's free to do whatever he wants with the 100 SDR worth of BTC he obtained by selling her dai, while the original BTC held as collateral (150 SDR worth) remains locked until the issuance debt plus the insurance fee is covered.
 
 <p> Although CDPs are not fungible with each other, the ownership of any one particular CDP is transferable. This allows CDPs to be used in smart contracts that perform more complex methods of issuance (for example, involving more than one actor).
 
-<p class=example> <b> Example 3. </b> Alice and Bob come together using an Ethereum OTC contract to issue 100 SDR worth of dai backed by bitcoins. Alice contributes 50 SDR worth of bitcoins while Bob contributes 100 SDR worth. The OTC contract takes the funds and creates a CDP, thus issuing 100 SDR worth of dai. The newly issued dai are automatically sent to Bob. Effectively, Bob is buying 100 SDR worth of dai for the equivalent amount of BTC. The contract then transfers ownership of the CDP to Alice, meaning she ends up with 100 SDR worth of issuance debt (denominated in dai) and 150 SDR worth of collateral (denominated in bitcoins). Since she started with only 50 SDR worth of bitcoins she is now 3&times; leveraged long BTC/SDR.
+<p class=example> <b> Example 3. </b> Alice and Bob come together using an Ethereum OTC contract to issue 100 SDR worth of dai backed by bitcoins. Alice contributes 50 SDR worth of bitcoins while Bob contributes 100 SDR worth. The OTC contract takes the funds and creates a CDP, thus issuing 100 SDR worth of dai. The newly issued dai are automatically sent to Bob. Effectively, Bob is buying 100 SDR worth of dai for the equivalent amount of BTC. The contract then transfers ownership of the CDP to Alice, meaning she ends up with 100 SDR worth of issuance debt (denominated in dai) and 150 SDR worth of collateral (denominated in bitcoins). Since she started with only 50 SDR worth of bitcoins, she is now 3x leveraged long BTC/SDR.
 
 <h2> How Maker maintains the value of the dai </h2>
 
