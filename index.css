@@ -13,7 +13,7 @@ b { font-family: sans-serif; font-size: 90% }
 .example { margin-left: 1rem; margin-right: 1rem }
 .example { font-size: .6rem; font-family: sans-serif;  }
 .status { font-family: sans-serif; font-size: .7rem; }
-.status { padding: .5rem 1rem; border: 1px solid #ccc; }
+.status { padding: .5rem 1rem; border: 1px solid gray; }
 
 hgroup img { width: 4.2rem }
 hgroup img { float: right }
